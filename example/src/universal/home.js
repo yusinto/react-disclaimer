@@ -1,20 +1,17 @@
 import React from 'react';
-import Disclaimer, {getDisclaimersForPage} from './disclaimer/disclaimer';
+import Disclaimer from './disclaimer/disclaimer';
+import DisclaimerCsv from './disclaimer/disclaimerCsv';
 
 const Home = () =>
   <div>
     <h1>Welcome to Universal Hot Reload</h1>
     <p>
-      Try<Disclaimer>Some disclaimer here</Disclaimer> changing this text in src/universal/home.js and verify that hot reloading works both on the server (view
+      Try<Disclaimer>Some disclaimer here</Disclaimer> changing this text in src/universal/home.js and verify that hot
+      reloading works both on the server (view
       source to confirm)
       and the browser<Disclaimer>Another disclaimer!</Disclaimer>!
     </p>
-    <div>
-      {
-        // TODO: does not work yet!
-        getDisclaimersForPage().map(d => `${d.symbol}`)
-      }
-    </div>
+    <DisclaimerCsv/>
   </div>;
 
 export default Home;
